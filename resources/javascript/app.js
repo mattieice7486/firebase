@@ -27,12 +27,20 @@ $( document ).ready(function() {
         }
     }
     var turn = 0;
+    var wins1 = players["1"].wins;
+    var wins2 = players["2"].wins;
+    var losses1 = players["1"].losses
+    var losses2 = players["2"].losses
+
+    $("#wins-1").text(wins1);
+    $("#wins-2").text(wins2);
+    $("#losses-1").text(losses1);
+    $("#losses-2").text(losses2);
     if (turn == 0) {
         $("#player-1-div").css("border-color", "yellow")
     } else {
         $("#player-2-div").css("border-color", "yellow")
     };
-    console.log(turn);
     database.ref().set({
         players: players,
         turn: turn

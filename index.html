@@ -12,21 +12,42 @@
 </head>
 <body>
     <div class="container">
-        <div class="row" id="title-bar">
-            <h1>Rock Paper Scissors</h1>
-        </div>
-        <div class="row" id="name-div">
-            <form>
-                <input type="text" name="name" value="name">
-                <input type="submit" value="Submit">
-            </form>
-            <p>Hi <span id="player-1"></span>! You are Player 1</p>
-            <p>Hi <span id="player-2"></span>! You are Player 2</p>
+        <div class="row">
+            <div class="col" id="title-bar">
+                <h1>Rock Paper Scissors</h1>
+            </div>
         </div>
         <div class="row">
-            <div class="col sm-4" id="player-1-div"></div>
-            <div class="col sm-4" id="result-div"></div>
-            <div class="col sm-4" id="player-2-div"></div>
+            <div class="col" id="name-div">
+                <h4>Hi <span id="player-1"></span>! You are Player 1</h4>
+                <br>
+                <h4>Hi <span id="player-2"></span>! You are Player 2</h4>
+                <form>
+                    <input type="text" name="name" value="name">
+                    <input type="submit" value="Submit">
+                </form>
+            </div>
+        </div>
+        <div class="row">
+            <div class="col sm-4" id="player-1-div">
+                <h5 id="player-1-name">Waiting for Player 1</h5>
+                <button id="rock-1">rock</button>
+                <button id="paper-1">paper</button>
+                <button id="scissors-1">scissors</button>
+                <p>wins: <span id="wins-1"></span></p>
+                <p>losses: <span id="losses-1"></span></p>
+            </div>
+            <div class="col sm-4" id="result-div">
+
+            </div>
+            <div class="col sm-4" id="player-2-div">
+                <h5 id="player-2-name">Waiting for Player 2</h5>
+                <button id="rock-2">rock</button>
+                <button id="paper-2">paper</button>
+                <button id="scissors-2">scissors</button>
+                <p>wins: <span id="wins-2"></span></p>
+                <p>losses: <span id="losses-2"></span></p>
+            </div>
         </div>
         <div class="row">
             <div class="col sm-6" id="chat-box">
