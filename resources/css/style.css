@@ -1,0 +1,20 @@
+body, #title-bar {
+    text-align: center;
+}
+
+#player-1-div, #result-div, #player-2-div {
+    border: 2px;
+    border-color: #000;
+    border-style: solid;
+    height: 200px;
+    width: 150px;
+    margin-right: 5px;
+}
+
+#chat-box {
+    border: 2px;
+    border-color: #000;
+    border-style: solid;
+    height: 300px;
+    margin-top: 5px;
+}

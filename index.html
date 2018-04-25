@@ -8,12 +8,38 @@
     <link rel="stylesheet" type="text/css" media="screen" href="https://stackpath.bootstrapcdn.com/bootstrap/4.1.0/css/bootstrap.min.css" />
     <link rel="stylesheet" type="text/css" media="screen" href="resources/css/style.css" />
     <script type="text/javascript" src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
-
+    <script src="https://www.gstatic.com/firebasejs/4.13.0/firebase.js"></script>
 </head>
 <body>
     <div class="container">
+        <div class="row" id="title-bar">
+            <h1>Rock Paper Scissors</h1>
+        </div>
+        <div class="row" id="name-div">
+            <form>
+                <input type="text" name="name" value="name">
+                <input type="submit" value="Submit">
+            </form>
+            <p>Hi <span id="player-1"></span>! You are Player 1</p>
+            <p>Hi <span id="player-2"></span>! You are Player 2</p>
+        </div>
         <div class="row">
+            <div class="col sm-4" id="player-1-div"></div>
+            <div class="col sm-4" id="result-div"></div>
+            <div class="col sm-4" id="player-2-div"></div>
+        </div>
+        <div class="row">
+            <div class="col sm-6" id="chat-box">
 
+            </div>
+        </div>
+        <div class="row">
+            <div class="col sm-6">
+                <form>
+                    <input type="text" name="chat" value="">
+                    <input type="submit" value="Send">
+                </form>
+            </div>
         </div>
     </div>
     <script src="resources/javascript/app.js"></script>
