@@ -1,4 +1,4 @@
-body, #title-bar {
+body {
     text-align: center;
 }
 
@@ -17,4 +17,13 @@ body, #title-bar {
     border-style: solid;
     height: 300px;
     margin-top: 5px;
+    text-align: left;
+}
+
+#player-1-greeting {
+    display: none;
+}
+
+#player-2-greeting {
+    display: none;
 }

@@ -19,21 +19,21 @@
         </div>
         <div class="row">
             <div class="col" id="name-div">
-                <h4>Hi <span id="player-1"></span>! You are Player 1</h4>
+                <h4 id="player-1-greeting">Hi <span id="player-1"></span>! You are Player 1</h4>
                 <br>
-                <h4>Hi <span id="player-2"></span>! You are Player 2</h4>
+                <h4 id="player-2-greeting">Hi <span id="player-2"></span>! You are Player 2</h4>
                 <form>
-                    <input type="text" name="name" value="name">
-                    <input type="submit" value="Submit">
+                    <input id="player-name" type="text" name="name" value="name">
+                    <input id="name-box" type="button" value="Submit">
                 </form>
             </div>
         </div>
         <div class="row">
             <div class="col sm-4" id="player-1-div">
                 <h5 id="player-1-name">Waiting for Player 1</h5>
-                <button id="rock-1">rock</button>
-                <button id="paper-1">paper</button>
-                <button id="scissors-1">scissors</button>
+                <button class="btn" id="rock-1">rock</button>
+                <button class="btn" id="paper-1">paper</button>
+                <button class="btn" id="scissors-1">scissors</button>
                 <p>wins: <span id="wins-1"></span></p>
                 <p>losses: <span id="losses-1"></span></p>
             </div>
@@ -42,9 +42,9 @@
             </div>
             <div class="col sm-4" id="player-2-div">
                 <h5 id="player-2-name">Waiting for Player 2</h5>
-                <button id="rock-2">rock</button>
-                <button id="paper-2">paper</button>
-                <button id="scissors-2">scissors</button>
+                <button class="btn" id="rock-2">rock</button>
+                <button class="btn" id="paper-2">paper</button>
+                <button class="btn" id="scissors-2">scissors</button>
                 <p>wins: <span id="wins-2"></span></p>
                 <p>losses: <span id="losses-2"></span></p>
             </div>
@@ -57,8 +57,8 @@
         <div class="row">
             <div class="col sm-6">
                 <form>
-                    <input type="text" name="chat" value="">
-                    <input type="submit" value="Send">
+                    <input id="player-chat" type="text" name="chat" value="">
+                    <input id="chat-send" type="button" value="Send">
                 </form>
             </div>
         </div>

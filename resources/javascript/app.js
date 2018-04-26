@@ -16,14 +16,16 @@ $( document ).ready(function() {
         name: "",
         choice: "",
         losses: 0,
-        wins: 0
+        wins: 0,
+        chat: "",
         },
 
         "2": {
         name: "",
         choice: "",
         losses: 0,
-        wins: 0
+        wins: 0,
+        chat: "",
         }
     }
     var turn = 0;
@@ -41,6 +43,27 @@ $( document ).ready(function() {
     } else {
         $("#player-2-div").css("border-color", "yellow")
     };
+
+    $("#name-box").on("click", function() {
+        players["1"].name = $("#player-name").val().trim();
+        $("#player-1").text(players["1"].name);
+        $("#player-1-greeting").css("display", "block");
+    });
+    
+    $("#chat-send").on("click", function() {
+        players["1"].chat = $("#player-chat").val().trim();
+        $("#chat-box").append(players["1"].name);
+        $("#chat-box").append(":" + " ");
+        $("#chat-box").append(players["1"].chat);
+        $("#chat-box").append("<br>");
+        $("#player-chat").text("");
+    });
+
+    $(".btn").on("click", function() {
+        turn++;
+        console.log(turn);
+    })
+
     database.ref().set({
         players: players,
         turn: turn
