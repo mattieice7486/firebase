@@ -1,4 +1,4 @@
-$( document ).ready(function() {
+$(document).ready(function() {
     var config = {
         apiKey: "AIzaSyBoycFgw6uezVlmKmfORR9LgkToRDnPRQg",
         authDomain: "ro-pa-scis.firebaseapp.com",
@@ -44,23 +44,60 @@ $( document ).ready(function() {
         $("#player-2-div").css("border-color", "yellow")
     };
 
-    $("#name-box").on("click", function() {
-        players["1"].name = $("#player-name").val().trim();
-        $("#player-1").text(players["1"].name);
-        $("#player-1-greeting").css("display", "block");
+    $("#name-box").on("click", function(event) {
+        if ($("#player-name").val() === "") {} else {
+            event.preventDefault();
+            players["1"].name = $("#player-name").val().trim();
+            $("#player-1").text(players["1"].name);
+            $("#player-1-greeting").css("display", "block");
+            database.ref().set({
+                players: players,
+                turn: turn
+            });
+        };
     });
     
-    $("#chat-send").on("click", function() {
-        players["1"].chat = $("#player-chat").val().trim();
-        $("#chat-box").append(players["1"].name);
-        $("#chat-box").append(":" + " ");
-        $("#chat-box").append(players["1"].chat);
-        $("#chat-box").append("<br>");
-        $("#player-chat").text("");
+    
+    $("#chat-send").on("click", function(event) {
+        if ($("#player-chat").val() === "") {} else {
+            event.preventDefault();
+            players["1"].chat = $("#player-chat").val().trim();
+            $("#chat-box").append(players["1"].name);
+            $("#chat-box").append(":" + " ");
+            $("#chat-box").append(players["1"].chat);
+            $("#chat-box").append("<br>");
+            $("#player-chat").text("");
+            $("#player-1-name").html(players["1"].name);
+            database.ref().set({
+                players: players,
+                turn: turn
+            });
+        };
     });
 
-    $(".btn").on("click", function() {
+    $(".btn-primary").on("click", function() {
         turn++;
+        players["1"].choice = $(this).text();
+        console.log(this);
+        console.log(players["1"].choice)
+        $("#player-1-buttons").html("<h4>" + players["1"].choice + "</h4>");
+        database.ref().set({
+            players: players,
+            turn: turn
+        });
+        console.log(turn);
+    })
+
+    $(".btn-warning").on("click", function() {
+        turn++;
+        players["2"].choice = $(this).text();
+        console.log(this);
+        console.log(players["2"].choice)
+        $("#player-2-buttons").html("<h4>" + players["2"].choice + "</h4>");
+        database.ref().set({
+            players: players,
+            turn: turn
+        });
         console.log(turn);
     })
 
