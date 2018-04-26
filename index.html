@@ -22,31 +22,35 @@
                 <h4 id="player-1-greeting">Hi <span id="player-1"></span>! You are Player 1</h4>
                 <br>
                 <h4 id="player-2-greeting">Hi <span id="player-2"></span>! You are Player 2</h4>
-                <form>
-                    <input id="player-name" type="text" name="name" value="name">
+                <form onsubmit="event.preventDefault();">
+                    <h3>Enter Your Name</h3>
+                    <input id="player-name" type="text" name="name" value="">
                     <input id="name-box" type="button" value="Submit">
                 </form>
+                <br>
             </div>
         </div>
         <div class="row">
             <div class="col sm-4" id="player-1-div">
                 <h5 id="player-1-name">Waiting for Player 1</h5>
-                <button class="btn" id="rock-1">rock</button>
-                <button class="btn" id="paper-1">paper</button>
-                <button class="btn" id="scissors-1">scissors</button>
-                <p>wins: <span id="wins-1"></span></p>
-                <p>losses: <span id="losses-1"></span></p>
+                    <div id="player-1-buttons">
+                        <button class="btn btn-primary" id="rock-1">rock</button>
+                        <button class="btn btn-primary" id="paper-1">paper</button>
+                        <button class="btn btn-primary" id="scissors-1">scissors</button>
+                    </div>
+                <p>wins: <span id="wins-1"></span>  losses: <span id="losses-1"></span></p>
             </div>
             <div class="col sm-4" id="result-div">
 
             </div>
             <div class="col sm-4" id="player-2-div">
                 <h5 id="player-2-name">Waiting for Player 2</h5>
-                <button class="btn" id="rock-2">rock</button>
-                <button class="btn" id="paper-2">paper</button>
-                <button class="btn" id="scissors-2">scissors</button>
-                <p>wins: <span id="wins-2"></span></p>
-                <p>losses: <span id="losses-2"></span></p>
+                    <div id="player-2-buttons">
+                        <button class="btn btn-warning" id="rock-2">rock</button>
+                        <button class="btn btn-warning" id="paper-2">paper</button>
+                        <button class="btn btn-warning" id="scissors-2">scissors</button>
+                    </div>
+                <p>wins: <span id="wins-2"></span>  losses: <span id="losses-2"></span></p>
             </div>
         </div>
         <div class="row">
@@ -56,7 +60,7 @@
         </div>
         <div class="row">
             <div class="col sm-6">
-                <form>
+                <form onsubmit="event.preventDefault();">
                     <input id="player-chat" type="text" name="chat" value="">
                     <input id="chat-send" type="button" value="Send">
                 </form>
