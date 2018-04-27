@@ -20,10 +20,14 @@ body {
     text-align: left;
 }
 
-#player-1-greeting {
+#player-1-greeting, #player-1-buttons, #player-2-greeting, #player-2-buttons  {
     display: none;
 }
 
-#player-2-greeting {
-    display: none;
+p {
+    margin-top: 10px;
+}
+
+.btn {
+    margin-top: 10px;
 }
