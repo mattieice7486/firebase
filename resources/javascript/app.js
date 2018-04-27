@@ -173,19 +173,12 @@ $(document).ready(function() {
             var msg = yourPlayerName + ": " + $("#player-chat").val().trim();
             $("#player-chat").val("");
     
-            // Get a key for the new chat entry
             var chatKey = database.ref().child("/chat/").push().key;
     
-            // Save the new chat entry
             database.ref("/chat/" + chatKey).set(msg);
             $("#chat-box").append(msg);
             $("#chat-box").append("<br>");
         }
-    });
-    database.ref().on("value", function(snapshot) {
-        
-    }, function(errorObject) {
-        console.log("The read failed: " + errorObject.code);
     });
 
     database.ref("/outcome/").on("value", function(snapshot) {
