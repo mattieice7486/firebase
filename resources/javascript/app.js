@@ -116,17 +116,13 @@ $(document).ready(function() {
                 database.ref("/players/player2").onDisconnect().remove();
             }
     
-            // Add a user joining message to the chat
             var msg = yourPlayerName + " has joined!";
             console.log(msg);
     
-            // Get a key for the join chat entry
             var chatKey = database.ref().child("/chat/").push().key;
     
-            // Save the join chat entry
             database.ref("/chat/" + chatKey).set(msg);
     
-            // Reset the name input box
             $("#player-name").val("");	
         }
     });
@@ -140,8 +136,9 @@ $(document).ready(function() {
                 $("#player-2-div").css("border-color", "black");
                 $("#player-1-div").css("border-color", "yellow");
                 $("#result-div").html("<h4>" + player1Name + ", make your choice!</h4>");
+                console.log(outcome);
             }
-            if (snapshot.child("outcome").exists()) {
+            if (snapshot.child("/outcome/").exists()) {
                 $("#round-outcome").html("<h4>" + outcome + "!</h4>");
             }
 
@@ -153,8 +150,9 @@ $(document).ready(function() {
                 $("#player-1-div").css("border-color", "black");
                 $("#player-2-div").css("border-color", "yellow");
                 $("#result-div").html("<h4>" + player2Name + ", make your choice!</h4>");
+                console.log(outcome);
             }
-            if (snapshot.child("outcome").exists()) {
+            if (snapshot.child("/outcome/").exists()) {
                 $("#round-outcome").html("<h4>" + outcome + "!</h4>");
             }
         }
@@ -176,13 +174,14 @@ $(document).ready(function() {
             var chatKey = database.ref().child("/chat/").push().key;
     
             database.ref("/chat/" + chatKey).set(msg);
-            $("#chat-box").append(msg);
-            $("#chat-box").append("<br>");
         }
     });
 
     database.ref("/outcome/").on("value", function(snapshot) {
+        var outcome = snapshot.val().outcome;
         $("#round-outcome").html(snapshot.val());
+        console.log(outcome);
+        console.log(snapshot.val().outcome);
     });
 
     $("#player-1-div").on("click", ".btn", function(event) {
