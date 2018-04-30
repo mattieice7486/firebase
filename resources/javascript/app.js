@@ -191,6 +191,8 @@ $(document).ready(function() {
     
             turn = 2;
             database.ref().child("/turn").set(2);
+            $("#round-outcome").html("");
+
         }
     });
     
