@@ -7,8 +7,7 @@ body {
     border-color: #000;
     border-style: solid;
     height: 200px;
-    width: 150px;
-    margin-right: 5px;
+    width: auto;
 }
 
 #chat-box {

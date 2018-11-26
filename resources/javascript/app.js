@@ -56,7 +56,7 @@ $(document).ready(function() {
         }
     
         if (player1 && player2) {
-            $("#player-1-div").css("border-color", "yellow")
+            $("#player-1-div").css("border-color", "red")
             $("#make-choice").html("<h4>" + player1Name + ", make your choice!</h4>");
         }
     
@@ -134,7 +134,7 @@ $(document).ready(function() {
     
             if (player1 && player2) {
                 $("#player-2-div").css("border-color", "black");
-                $("#player-1-div").css("border-color", "yellow");
+                $("#player-1-div").css("border-color", "red");
                 $("#make-choice").html("<h4>" + player1Name + ", make your choice!</h4>");
             }
             if (snapshot.child("/outcome/").exists()) {
@@ -147,7 +147,7 @@ $(document).ready(function() {
     
             if (player1 && player2) {
                 $("#player-1-div").css("border-color", "black");
-                $("#player-2-div").css("border-color", "yellow");
+                $("#player-2-div").css("border-color", "red");
                 $("#make-choice").html("<h4>" + player2Name + ", make your choice!</h4>");
             }
             if (snapshot.child("/outcome/").exists()) {
