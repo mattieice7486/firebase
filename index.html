@@ -14,7 +14,7 @@
     <div class="container">
         <div class="row">
             <div class="col" id="title-bar">
-                <h1>Rock Paper Scissors</h1>
+                <h1><span id="title-rock">Rock</span> <span id="title-paper">Paper</span> <span id="title-scissors">Scissors</span></h1>
             </div>
         </div>
         <div class="row">
@@ -24,32 +24,32 @@
                 <form id="enter-name" onsubmit="event.preventDefault();">
                     <h3>Enter Your Name</h3>
                     <input id="player-name" type="text" name="name" placeholder="Your Name">
-                    <input id="name-box" type="button" value="Submit">
+                    <input class="btn-dark" id="name-box" type="button" value="Submit">
                 </form>
                 <br>
             </div>
         </div>
         <div class="row">
-            <div class="col-12 col-sm-4" id="player-1-div">
+            <div class="col-12 col-md-4" id="player-1-div">
                 <h5 id="player-1-name">Waiting for Player 1</h5>
                     <p id="player-1-stats"></p>
                         <div id="player-1-buttons">
-                            <button class="btn btn-primary" id="rock-1">rock</button>
-                            <button class="btn btn-primary" id="paper-1">paper</button>
-                            <button class="btn btn-primary" id="scissors-1">scissors</button>
+                            <button class="btn btn-primary" id="rock-1" value="rock"><img src="resources/img/rock.jpg"></button>
+                            <button class="btn btn-primary" id="paper-1" value="paper"><img src="resources/img/paper.jpg"></button>
+                            <button class="btn btn-primary" id="scissors-1" value="scissors"><img src="resources/img/scissors.jpg"></button>
                         </div>
             </div>
-            <div class="col-12 col-sm-4" id="result-div">
+            <div class="col-12 col-md-4" id="result-div">
                 <div id="make-choice"></div>
                 <h4 id="round-outcome"></h4>
             </div>
-            <div class="col-12 col-sm-4" id="player-2-div">
+            <div class="col-12 col-md-4" id="player-2-div">
                 <h5 id="player-2-name">Waiting for Player 2</h5>
                     <p id="player-2-stats"></p>
                         <div id="player-2-buttons">
-                            <button class="btn btn-warning" id="rock-2">rock</button>
-                            <button class="btn btn-warning" id="paper-2">paper</button>
-                            <button class="btn btn-warning" id="scissors-2">scissors</button>
+                            <button class="btn btn-warning" id="rock-2" value="rock"><img src="resources/img/rock.jpg"></button>
+                            <button class="btn btn-warning" id="paper-2" value="paper"><img src="resources/img/paper.jpg"></button>
+                            <button class="btn btn-warning" id="scissors-2" value="scissors"><img src="resources/img/scissors.jpg"></button>
                         </div>
             </div>
         </div>
@@ -62,7 +62,7 @@
             <div class="col sm-6" id="chat-form">
                 <form onsubmit="event.preventDefault();">
                     <input id="player-chat" type="text" name="chat" value="">
-                    <input id="chat-send" type="button" value="Send">
+                    <input class="btn-dark" id="chat-send" type="button" value="Send">
                 </form>
             </div>
         </div>

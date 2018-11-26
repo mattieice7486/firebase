@@ -1,13 +1,31 @@
 body {
     text-align: center;
+    background-image: linear-gradient(to right, rgb(170, 141, 98), #fff, #fff, rgb(122, 122, 122));
+}
+
+#title-rock, #title-paper, #title-scissors {
+    text-shadow: 2px 2px 4px black;
+}
+
+#title-rock{
+    color: rgb(170, 141, 98)
+}
+
+#title-paper{
+    color: #fff
+}
+
+#title-scissors{
+    color:  rgb(122, 122, 122)
 }
 
 #player-1-div, #result-div, #player-2-div {
     border: 2px;
     border-color: #000;
     border-style: solid;
-    height: 200px;
+    height: auto;
     width: auto;
+    padding-bottom: 10px;
 }
 
 #chat-box {
@@ -26,4 +44,8 @@ body {
 
 p, .btn, #chat-form {
     margin-top: 10px;
+}
+
+.btn {
+    padding: 1px;
 }

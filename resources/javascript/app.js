@@ -184,7 +184,7 @@ $(document).ready(function() {
         event.preventDefault();
     
         if (player1 && player2 && (yourPlayerName === player1.name) && (turn === 1) ) {
-            var choice = $(this).text().trim();
+            var choice = $(this).val().trim();
     
             player1.choice = choice;
             database.ref().child("/players/player1/choice").set(choice);
@@ -200,7 +200,7 @@ $(document).ready(function() {
         event.preventDefault();
     
         if (player1 && player2 && (yourPlayerName === player2.name) && (turn === 2) ) {
-            var choice = $(this).text().trim();
+            var choice = $(this).val().trim();
     
             player2.choice = choice;
             database.ref().child("/players/player2/choice").set(choice);
